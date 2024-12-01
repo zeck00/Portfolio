@@ -38,7 +38,7 @@ const About = () => {
               Contact Me
             </motion.a>
             <motion.a
-              href="../../dist/assets/CV-Ziad.pdf"
+              href="../../assets/CV-Ziad.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
