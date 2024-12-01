@@ -47,7 +47,7 @@ const Hero = () => {
         >
           <div className="w-48 h-48 mx-auto relative">
             <img
-              src="../../assets/pfp_en.png"
+              src="https://drive.google.com/thumbnail?id=14Nl6mqtLRIDfjZe1kYt-4Abwu8qhBKxW"
               alt="Ziad Ahmad"
               className="rounded-full w-45 h-45 md:w-45 md:h-45 object-cover mx-auto mb-8 glow-effect"
             />

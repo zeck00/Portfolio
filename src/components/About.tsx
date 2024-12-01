@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Download, Mail } from 'lucide-react';
+import { FileText, Mail } from 'lucide-react';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -38,14 +38,13 @@ const About = () => {
               Contact Me
             </motion.a>
             <motion.a
-              href="../../assets/CV-Ziad.pdf"
-              download
+              href="https://drive.google.com/file/d/1zowTQnPWJnZjqbnsNBcHId8tu-E41ZSh/view?usp=sharing"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
             >
-              <Download className="mr-2" size={18} />
-              Download CV
+              <FileText className="mr-2" size={18} />
+              View CV
             </motion.a>
           </div>
         </div>
