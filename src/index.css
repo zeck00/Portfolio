@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.apple-section-dark {
+  @apply bg-[#000000] relative overflow-hidden;
+}
+
+.apple-section-light {
+  @apply bg-[#ffffff] relative overflow-hidden;
+}
+
+.apple-section-gray {
+  @apply bg-[#f5f5f7] relative overflow-hidden;
+}
+
+.apple-heading {
+  @apply text-4xl md:text-5xl font-bold tracking-tight;
+}
+
+.apple-subheading {
+  @apply text-xl md:text-2xl font-light text-gray-500;
+}
+
+.apple-gradient {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glass-effect:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0EA5E9 0%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Add new frosted glass background for light theme */
+.frosted-glass-bg {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glow-effect {
+  box-shadow: 0 0 50px rgba(14, 165, 233, 0.5);
+}
+
+/* Custom Timeline Styles */
+.custom-timeline .vertical-timeline::before {
+  background: linear-gradient(to bottom, 
+    rgba(14, 165, 233, 0.2),
+    rgba(14, 165, 233, 0.4),
+    rgba(14, 165, 233, 0.2)
+  );
+  width: 3px;
+}
+
+.custom-timeline .vertical-timeline-element-date {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+.custom-timeline .vertical-timeline-element-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px; /* Ensures the circle is big enough */
+  height: 60px; /* Matches the width for a perfect circle */
+  border-radius: 50%; /* Ensures it's a circle */
+  background: #0EA5E9; /* Matches the icon background color */
+  color: #fff; /* White icon color */
+  border: 2px solid white; /* Adds the white border */
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.6); /* Optional glow effect */
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+
+.custom-timeline .vertical-timeline-element:hover .vertical-timeline-element-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.6);
+}
+
+.custom-timeline .vertical-timeline-element-content {
+  transition: all 0.3s ease;
+}
+
+.custom-timeline .vertical-timeline-element:hover .vertical-timeline-element-content {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (min-width: 1170px) {
+  .custom-timeline .vertical-timeline-element-date {
+    font-size: 1rem;
+  }
+}
+
