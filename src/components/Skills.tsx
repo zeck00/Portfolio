@@ -1,35 +1,46 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { skills } from '../data/content';
-import { Code2, Brain, Smartphone, Server } from 'lucide-react';
+import { Code2, Brain, Smartphone, Server, Star } from 'lucide-react';
 
 interface SkillCategoryProps {
   title: string;
   icon: React.ReactNode;
   skills: Array<{
     name: string;
-    level: number;
+    level: string;
     emoji?: string;
   }>;
   delay?: number;
 }
 
-const SkillBar = ({ name, level, emoji, delay }: { name: string; level: number; emoji?: string; delay: number }) => {
+const levelToStars = {
+  "Beginner": 1,
+  "Intermediate": 2,
+  "Advanced": 3,
+  "Expert": 4,
+  
+};
+
+const SkillBar = ({ name, level, emoji, delay }: { name: string; level: string; emoji?: string; delay: number }) => {
+  const stars = levelToStars[level];
+
   return (
     <div className="mb-6">
-      <div className="flex justify-between mb-1">
+      <div className="flex justify-between items-center mb-1">
         <span className="text-base font-medium text-gray-200 flex items-center gap-2">
           {emoji} {name}
         </span>
-        <span className="text-sm text-gray-400">{level}%</span>
-      </div>
-      <div className="w-full bg-gray-800/50 rounded-full h-2.5 glass-effect">
-        <motion.div
-          className="bg-sky-400 h-2.5 rounded-full"
-          initial={{ width: 0 }}
-          whileInView={{ width: `${level}%` }}
-          transition={{ duration: 1, delay }}
-        />
+        <div className="flex">
+          {[...Array(4)].map((_, i) => (
+            <Star
+              key={i}
+              size={16}
+              color={i < stars ? '#0ea5e9' : '#374151'}
+              fill={i < stars ? '#0ea5e9' : 'none'}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

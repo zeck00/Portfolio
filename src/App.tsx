@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ThreeBackground from './components/ThreeBackground';
 import ProjectPage from './components/ProjectPage';
+import Certifications from './components/Certifications';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Skills />
               <Experience />
               <Projects />
+              <Certifications />
               <Contact />
               <ThreeBackground />
             </>
