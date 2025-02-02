@@ -1,29 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { skills } from '../data/content';
-import { Code2, Brain, Smartphone, Server, Star } from 'lucide-react';
-
-interface SkillCategoryProps {
-  title: string;
-  icon: React.ReactNode;
-  skills: Array<{
-    name: string;
-    level: string;
-    emoji?: string;
-  }>;
-  delay?: number;
-}
+import React from "react"
+import { motion } from "framer-motion"
+import { skills } from "../data/content.js"
+import { Code2, Brain, Smartphone, Server, Star } from "lucide-react"
 
 const levelToStars = {
-  "Beginner": 1,
-  "Intermediate": 2,
-  "Advanced": 3,
-  "Expert": 4,
-  
-};
+  Beginner: 1,
+  Intermediate: 2,
+  Advanced: 3,
+  Expert: 4
+}
 
-const SkillBar = ({ name, level, emoji, delay }: { name: string; level: string; emoji?: string; delay: number }) => {
-  const stars = levelToStars[level];
+const SkillBar = ({ name, level, emoji, delay }) => {
+  const stars = levelToStars[level]
 
   return (
     <div className="mb-6">
@@ -36,17 +24,17 @@ const SkillBar = ({ name, level, emoji, delay }: { name: string; level: string; 
             <Star
               key={i}
               size={16}
-              color={i < stars ? '#0ea5e9' : '#374151'}
-              fill={i < stars ? '#0ea5e9' : 'none'}
+              color={i < stars ? "#0ea5e9" : "#374151"}
+              fill={i < stars ? "#0ea5e9" : "none"}
             />
           ))}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-const SkillCategory = ({ title, icon, skills, delay = 0 }: SkillCategoryProps) => {
+const SkillCategory = ({ title, icon, skills, delay = 0 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -55,9 +43,7 @@ const SkillCategory = ({ title, icon, skills, delay = 0 }: SkillCategoryProps) =
       className="glass-effect rounded-3xl p-8 hover:transform hover:scale-[1.02] transition-all duration-300"
     >
       <div className="flex items-center gap-3 mb-8">
-        <div className="p-3 rounded-xl bg-sky-400/10 text-sky-400">
-          {icon}
-        </div>
+        <div className="p-3 rounded-xl bg-sky-400/10 text-sky-400">{icon}</div>
         <h3 className="text-2xl font-bold text-white">{title}</h3>
       </div>
       <div className="space-y-6">
@@ -72,32 +58,32 @@ const SkillCategory = ({ title, icon, skills, delay = 0 }: SkillCategoryProps) =
         ))}
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
       icon: <Code2 size={24} />,
-      skills: skills.filter(s => s.category === 'frontend'),
+      skills: skills.filter(s => s.category === "frontend")
     },
     {
       title: "Mobile Development",
       icon: <Smartphone size={24} />,
-      skills: skills.filter(s => s.category === 'mobile'),
+      skills: skills.filter(s => s.category === "mobile")
     },
     {
       title: "Artificial Intelligence",
       icon: <Brain size={24} />,
-      skills: skills.filter(s => s.category === 'ai'),
+      skills: skills.filter(s => s.category === "ai")
     },
     {
       title: "Backend Development",
       icon: <Server size={24} />,
-      skills: skills.filter(s => s.category === 'backend'),
-    },
-  ];
+      skills: skills.filter(s => s.category === "backend")
+    }
+  ]
 
   return (
     <section id="skills" className="apple-section-dark py-24">
@@ -109,8 +95,9 @@ const Skills = () => {
         >
           <h2 className="apple-heading text-white mb-4">Skills & Expertise</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A comprehensive overview of my technical capabilities and proficiency levels
-            across different domains of software development and artificial intelligence.
+            A comprehensive overview of my technical capabilities and
+            proficiency levels across different domains of software development
+            and artificial intelligence.
           </p>
         </motion.div>
 
@@ -127,7 +114,7 @@ const Skills = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

@@ -1,22 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Award } from 'lucide-react';
-import { certifications } from '../data/content';
+import React from "react"
+import { motion } from "framer-motion"
+import { Award } from "lucide-react"
+import { certifications } from "../data/content.js"
 
-interface Certification {
-  name: string;
-  issuer: string;
-  date: string;
-  link?: string;
-}
-
-const CertificationItem = ({ name, issuer, date, link, delay }: Certification & { delay: number }) => (
+const CertificationItem = ({ name, issuer, date, link, delay }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay }}
     className="glass-effect rounded-xl p-6 hover:transform hover:scale-[1.02] transition-all duration-300"
-    
   >
     <div className="flex items-start gap-3">
       <div className="p-3 rounded-xl bg-yellow-400/10 text-yellow-400">
@@ -40,10 +32,13 @@ const CertificationItem = ({ name, issuer, date, link, delay }: Certification & 
       </div>
     </div>
   </motion.div>
-);
+)
 
 const Certifications = () => (
-  <section id="certifications" className="bg-gradient-to-br from-gray-900 via-gray-80 to-gray-900 py-24 text-white">
+  <section
+    id="certifications"
+    className="bg-gradient-to-br from-gray-900 via-gray-80 to-gray-900 py-24 text-white"
+  >
     <div className="container mx-auto px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -52,7 +47,8 @@ const Certifications = () => (
       >
         <h2 className="apple-heading text-white mb-4">Certifications</h2>
         <p className="text-gray-400 max-w-2xl mx-auto">
-          A showcase of the certifications I've achieved, demonstrating my dedication to continuous learning and professional development.
+          A showcase of the certifications I've achieved, demonstrating my
+          dedication to continuous learning and professional development.
         </p>
       </motion.div>
 
@@ -67,6 +63,6 @@ const Certifications = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default Certifications; 
+export default Certifications
