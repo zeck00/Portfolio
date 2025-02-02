@@ -1,7 +1,7 @@
 # Settings for Netlify deployment
 [build]
   publish = "build"
-  command = "npm install --legacy-peer-deps --force && npm run build:obfuscate"
+  command = "npm install -g npm@9 && npm install --legacy-peer-deps --force && npm run build:obfuscate"
 
 # Handles client-side routing
 [[redirects]]
