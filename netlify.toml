@@ -1,18 +1,13 @@
 # Settings for Netlify deployment
 [build]
   publish = "build"
-  command = "npm install --legacy-peer-deps --force && npm run build:obfuscate"
+  command = "npm install && npm run build:obfuscate"
 
 # Handles client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 404
 
 
 # Security headers
