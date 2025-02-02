@@ -347,7 +347,7 @@ export const projects = [
       "Created a unified design system for both languages"
     ],
     github: "https://github.com/zeck00/daralmaha",
-    link: "https://daralamha.netlify.app"
+    link: "https://daralmaha.netlify.app/"
   }
 ]
 
