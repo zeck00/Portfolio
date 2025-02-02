@@ -49,7 +49,7 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden apple-gradient"
     >
-      <div className="absolute inset-0 bg'/assets/images/bg.png' bg-cover bg-center opacity-20" />
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=3353&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-20" />
 
       <ClickSpark
           sparkColor='#ffffff'
