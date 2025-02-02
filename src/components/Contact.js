@@ -35,7 +35,7 @@ const Contact = () => {
     },
     {
       icon: Calendar,
-      href: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0_VV9ZVPkqEZqz_RdQHqK7VWUxMzF9ZDFhMDVmZDM0ZmY5ZmE4ZTY5ZjM3ZTM4Y2U3Y0BncnVwby5jYWxlbmRhci5nb29nbGUuY29t",
+      href: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0nA2SiK4yXmI39Vbw9UJxrXv2vtLp1gpqszZ_HuhvUAXUEtWRr94KR9rvgvrMqbSwruFsPkYw8?gv=true",
       label: "Schedule a Call",
       hoverClass: "hover:text-[#4285F4]"
     }

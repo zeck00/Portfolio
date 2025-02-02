@@ -7,20 +7,52 @@ import TiltedCard from "./TiltedCard.js"
 const Projects = () => {
   const navigate = useNavigate()
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  }
+
   return (
     <section id="projects" className="bg-gradient-to-b from-black/20 to-black/90 py-24 relative">
       <div className="container mx-auto px-4">
-        <h2 className="apple-heading text-center mb-16 text-white">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="apple-heading text-center mb-16 text-white"
+        >
           Featured Projects
-        </h2>
+        </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {projects.map((project, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              key={project.id}
+              variants={itemVariants}
               className="group cursor-pointer"
               onClick={() => navigate(`/project/${project.id}`)}
             >
@@ -59,7 +91,7 @@ const Projects = () => {
               />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

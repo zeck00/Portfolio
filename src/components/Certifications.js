@@ -1,68 +1,51 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { Award } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 import { certifications } from "../data/content.js"
 
-const CertificationItem = ({ name, issuer, date, link, delay }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay }}
-    className="glass-effect rounded-xl p-6 hover:transform hover:scale-[1.02] transition-all duration-300"
-  >
-    <div className="flex items-start gap-3">
-      <div className="p-3 rounded-xl bg-yellow-400/10 text-yellow-400">
-        <Award size={24} />
+const Certifications = () => {
+  return (
+    <section className="bg-gradient-to-b from-[#0A192F]/60 to-[#0A192F]/90 py-24">
+      <div className="container mx-auto px-4">
+        <h2 className="apple-heading text-center mb-16 text-white">Certifications</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="glass-effect p-6 rounded-xl hover:scale-[1.02] transition-all group relative bg-black/40"
+            >
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-semibold text-white mb-2 pr-8">
+                    {cert.name}
+                  </h3>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>{cert.issuer}</span>
+                    <span className="text-gray-600">•</span>
+                    <span>{cert.date}</span>
+                  </div>
+                </div>
+                <motion.a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-4 right-4 p-2 rounded-full bg-[#0EA5E9]/10 text-[#0EA5E9] 
+                           hover:bg-[#0EA5E9] hover:text-white transition-all duration-300"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <ExternalLink size={16} />
+                </motion.a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-      <div>
-        <h4 className="text-lg font-semibold text-white">{name}</h4>
-        <p className="text-sm text-gray-400">
-          <span className="font-medium text-sky-400">{issuer}</span> • {date}
-        </p>
-        {link && (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-400 text-sm underline mt-2 block"
-          >
-            View Certificate
-          </a>
-        )}
-      </div>
-    </div>
-  </motion.div>
-)
-
-const Certifications = () => (
-  <section
-    id="certifications"
-    className="bg-gradient-to-br from-gray-900 via-gray-80 to-gray-900 py-24 text-white"
-  >
-    <div className="container mx-auto px-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        className="text-center mb-16"
-      >
-        <h2 className="apple-heading text-white mb-4">Certifications</h2>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          A showcase of the certifications I've achieved, demonstrating my
-          dedication to continuous learning and professional development.
-        </p>
-      </motion.div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {certifications.map((certification, index) => (
-          <CertificationItem
-            key={certification.name}
-            {...certification}
-            delay={index * 0.2}
-          />
-        ))}
-      </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 export default Certifications
