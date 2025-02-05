@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import ClickSpark from "./Spark.js"
 import {
@@ -13,6 +13,16 @@ import { useScrollTo } from "../hooks/useScrollTo.js"
 
 const Hero = () => {
   const scrollTo = useScrollTo()
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
 
   const socialLinks = [
     {
@@ -49,7 +59,38 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden apple-gradient"
     >
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=3353&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-20" />
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=3353&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-30" />
+      
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          opacity: 0.1
+        }}
+      />
+
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(circle 150px at ${mousePosition.x}px ${mousePosition.y}px, transparent 20%, rgba(0, 0, 0, 0.4) 100%)`,
+          mixBlendMode: 'multiply'
+        }}
+      />
+
+      <style jsx>{`
+        @keyframes grain {
+          0%, 100% { transform: translate(0, 0) }
+          10% { transform: translate(-5%, -5%) }
+          20% { transform: translate(-10%, 5%) }
+          30% { transform: translate(5%, -10%) }
+          40% { transform: translate(-5%, 15%) }
+          50% { transform: translate(-10%, 5%) }
+          60% { transform: translate(15%, 0) }
+          70% { transform: translate(0, 10%) }
+          80% { transform: translate(-15%, 0) }
+          90% { transform: translate(10%, 5%) }
+        }
+      `}</style>
 
       <ClickSpark
           sparkColor='#ffffff'
