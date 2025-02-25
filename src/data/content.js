@@ -1,5 +1,63 @@
 export const projects = [
   {
+    id: "vistra",
+    title: "Vistra - AI Foresight Engine",
+    description: "Dubai's cutting-edge AI Foresight Engine that revolutionizes how we understand and predict global trends, patterns, and risks. Built in partnership with Dubai Customs and Zayed University.",
+    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=3732&auto=format&fit=crop",
+    tags: ["AI", "Analytics", "Enterprise"],
+    emoji: "🔮",
+    duration: "8 months",
+    teamSize: 4,
+    role: "Lead Developer",
+    features: [
+      "Predictive intelligence engine",
+      "Real-time trend analysis",
+      "Risk management system",
+      "Smart analytics dashboard",
+      "Custom government solutions",
+      "Enterprise security protocols"
+    ],
+    technologies: [
+      {
+        name: "LLM",
+        description: "Core AI and predictive modeling framework"
+      },
+      {
+        name: "Python",
+        description: "Backend development and data processing"
+      },
+      {
+        name: "React",
+        description: "Frontend dashboard and visualizations"
+      },
+    ],
+    challenges: [
+      "Building highly accurate prediction models",
+      "Handling large-scale governmental data",
+      "Implementing enterprise-grade security",
+      "Creating intuitive visualizations for complex data"
+    ],
+    solutions: [
+      "Developed custom AI models with 95% prediction accuracy",
+      "Implemented scalable data processing pipeline",
+      "Integrated end-to-end encryption and ISO 27001 compliance",
+      "Created interactive dashboards for data visualization"
+    ],
+    stats: [
+      "95% Prediction Accuracy",
+      "99% Faster Analysis",
+      "60% Risk Reduction",
+      "100% Operational Efficiency Boost"
+    ],
+    testimonial: {
+      quote: "Vistra has transformed how we handle future analysis. What used to take weeks now happens in minutes.",
+      author: "Senior Government Official",
+      role: "Dubai Customs"
+    },
+    github: "https://github.com/zeck00/vistra",
+    link: "#"
+  },
+  {
     id: "banders-potato-app",
     title: "Bander's Potato App",
     description:
@@ -348,7 +406,7 @@ export const projects = [
     ],
     github: "https://github.com/zeck00/daralmaha",
     link: "https://daralmaha.netlify.app/"
-  }
+  },
 ]
 
 export const experiences = [
