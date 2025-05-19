@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { FileText, Video } from "lucide-react"
 import RotatingText from "./RotatingText.js"
+import animationConfig from "../utils/animationConfig.js"
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -25,7 +26,7 @@ const About = () => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: animationConfig.duration.medium }}
       className="apple-section-light py-24"
     >
       <div className="container mx-auto px-4">
@@ -38,8 +39,8 @@ const About = () => {
                 texts={roles}
                 className="font-bold text-white inline-block"
                 splitBy="words"
-                rotationInterval={3000}
-                staggerDuration={0.025}
+                rotationInterval={2000}
+                staggerDuration={0.015}
                 elementLevelClassName="font-bold"
               />
             </div>

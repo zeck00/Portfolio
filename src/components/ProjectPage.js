@@ -15,6 +15,7 @@ import {
   Layers,
 } from "lucide-react"
 import { projects } from "../data/content.js"
+import animationConfig from "../utils/animationConfig.js"
 
 const getTechIcon = (techName) => {
   const iconMap = {
@@ -69,7 +70,7 @@ const ProjectDetails = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
+    transition: { duration: animationConfig.duration.fast }
   }
 
   return (

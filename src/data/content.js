@@ -7,7 +7,7 @@ export const projects = [
     tags: ["AI", "Analytics", "Enterprise"],
     emoji: "🔮",
     duration: "8 months",
-    teamSize: 4,
+    teamSize: 3,
     role: "Lead Developer",
     features: [
       "Predictive intelligence engine",
@@ -485,6 +485,24 @@ export const experiences = [
 
 export const skills = [
   {
+    name: "React",
+    level: "Expert",
+    category: "frontend",
+    emoji: "💻"
+  },
+  {
+    name: "Docker",
+    level: "Expert",
+    category: "backend",
+    emoji: "🐳"
+  },
+  {
+    name: "AWS",
+    level: "Advanced",
+    category: "backend",
+    emoji: "🌐"
+  },
+  {
     name: "Flutter",
     level: "Expert",
     category: "frontend",
@@ -595,6 +613,24 @@ export const skills = [
 ]
 
 export const certifications = [
+  {
+    name: "Atlassian Agile Project Management Certificate",
+    issuer: "Atlassian & LinkedIn",
+    date: "2025",
+    link: "https://www.linkedin.com/learning/certificates/cca74e9d7a85dcf63438090c02618f083fca9d244851220c1df2f5876ddfd2e2"
+  },
+  {
+    name: "Docker Foundations Professional Certificate",
+    issuer: "Docker & LinkedIn",
+    date: "2025",
+    link: "https://www.linkedin.com/learning/certificates/15bba84f3ed0f4afea6bbb2711bff1eb94f774e567898cfe93d2305df8c6dc91"
+  },
+  {
+    name: "Tech On the Go Ethics in AI",
+    issuer: "LinkedIn",
+    date: "2025",
+    link: "https://www.linkedin.com/learning/certificates/1145bddef125bfee14b557d980491b26c3f18fea78c251a9e01e33c4593eac8f"
+  },
   {
     name: "Career Essentials in Generative AI",
     issuer: "Microsoft & LinkedIn",

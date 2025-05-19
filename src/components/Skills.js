@@ -2,6 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { skills } from "../data/content.js"
 import { Code2, Brain, Smartphone, Server, Star } from "lucide-react"
+import animationConfig from "../utils/animationConfig.js"
 
 const levelToStars = {
   Beginner: 1,
@@ -39,8 +40,8 @@ const SkillCategory = ({ title, icon, skills, delay = 0 }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      className="glass-effect rounded-3xl p-8 hover:transform hover:scale-[1.02] transition-all duration-300"
+      transition={{ duration: animationConfig.duration.fast, delay }}
+      className="glass-effect rounded-3xl p-8 hover:transform hover:scale-[1.02] transition-all duration-200"
     >
       <div className="flex items-center gap-3 mb-8">
         <div className="p-3 rounded-xl bg-sky-400/10 text-sky-400">{icon}</div>
@@ -53,7 +54,7 @@ const SkillCategory = ({ title, icon, skills, delay = 0 }) => {
             name={skill.name}
             level={skill.level}
             emoji={skill.emoji}
-            delay={delay + index * 0.1}
+            delay={delay + index * animationConfig.delay.short}
           />
         ))}
       </div>
@@ -91,6 +92,7 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: animationConfig.duration.fast }}
           className="text-center mb-16"
         >
           <h2 className="apple-heading text-white mb-4">Skills & Expertise</h2>
@@ -108,7 +110,7 @@ const Skills = () => {
               title={category.title}
               icon={category.icon}
               skills={category.skills}
-              delay={index * 0.2}
+              delay={index * animationConfig.delay.medium}
             />
           ))}
         </div>

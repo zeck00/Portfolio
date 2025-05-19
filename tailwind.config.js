@@ -14,7 +14,7 @@ export default {
         ],
       },
       animation: {
-        'gradient': 'gradient 8s linear infinite',
+        'gradient': 'gradient 5s linear infinite',
       },
       keyframes: {
         gradient: {

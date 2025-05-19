@@ -10,6 +10,10 @@ import {
   Music2
 } from "lucide-react"
 import { useScrollTo } from "../hooks/useScrollTo.js"
+import animationConfig from "../utils/animationConfig.js"
+
+// Import the background image from src/assets
+import bgImage from "../assets/bg1.png";
 
 const Hero = () => {
   const scrollTo = useScrollTo()
@@ -59,7 +63,14 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden apple-gradient"
     >
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=3353&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-30" />
+      <div 
+        className="absolute inset-0 opacity-30" 
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
       
       <div 
         className="absolute inset-0 pointer-events-none"
@@ -97,7 +108,7 @@ const Hero = () => {
           sparkSize={10}
           sparkRadius={50}
           sparkCount={10}
-          duration={300} 
+          duration={200} 
           className="z-20"
         > 
         </ClickSpark>
@@ -105,7 +116,7 @@ const Hero = () => {
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: animationConfig.duration.medium }}
           className="mb-8 relative"
         >
 
@@ -114,7 +125,7 @@ const Hero = () => {
           sparkSize={10}
           sparkRadius={50}
           sparkCount={10}
-          duration={300} 
+          duration={200} 
           className="z-20"
         > 
         </ClickSpark>
@@ -130,7 +141,7 @@ const Hero = () => {
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: animationConfig.delay.short }}
           className="text-5xl md:text-7xl font-bold mb-4 text-white tracking-tight"
         >
           Ziad Ahmad
@@ -141,7 +152,7 @@ const Hero = () => {
           sparkSize={10}
           sparkRadius={50}
           sparkCount={10}
-          duration={300} 
+          duration={200} 
           className="z-20"
         > 
         </ClickSpark>
@@ -149,7 +160,7 @@ const Hero = () => {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: animationConfig.delay.medium }}
           className="text-lg md:text-2xl text-gray-400 mb-8 font-light"
         >
           Full Stack Mobile App Developer • Content Creator • AI Engineer • Innovator
@@ -158,7 +169,7 @@ const Hero = () => {
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: animationConfig.delay.medium + 0.05 }}
           className="flex flex-col items-center gap-4 mb-12"
         >
           <div className="grid grid-cols-5 sm:flex sm:flex-row justify-center gap-3 sm:gap-6 px-4 max-w-sm mx-auto">
@@ -170,7 +181,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="glass-effect p-3 sm:p-4 rounded-2xl text-white transition-all duration-300 flex items-center justify-center"
+                className="glass-effect p-3 sm:p-4 rounded-2xl text-white transition-all duration-200 flex items-center justify-center"
                 aria-label={link.label}
               >
                 <link.icon size={20} className="sm:w-6 sm:h-6" />
@@ -184,11 +195,11 @@ const Hero = () => {
             onClick={() => window.open("https://calendar.google.com/calendar/appointments/schedules/AcZssZ0nA2SiK4yXmI39Vbw9UJxrXv2vtLp1gpqszZ_HuhvUAXUEtWRr94KR9rvgvrMqbSwruFsPkYw8?gv=true", '_blank')}
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: animationConfig.delay.long }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="w-full sm:w-auto glass-effect text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium
-                     border border-[#0EA5E9] hover:bg-[#0EA5E9] transition-all duration-300"
+                     border border-[#0EA5E9] hover:bg-[#0EA5E9] transition-all duration-200"
           >
             Book an appointment
           </motion.button>
@@ -204,7 +215,7 @@ const Hero = () => {
         }}
         transition={{
           repeat: Infinity,
-          duration: 2
+          duration: animationConfig.infinity.duration
         }}
       >
         <ChevronDown size={32} className="text-white" />
@@ -214,7 +225,7 @@ const Hero = () => {
           sparkSize={10}
           sparkRadius={50}
           sparkCount={10}
-          duration={300} 
+          duration={200} 
           className="z-20"
         > 
         </ClickSpark>

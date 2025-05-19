@@ -2,6 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 import { certifications } from "../data/content.js"
+import animationConfig from "../utils/animationConfig.js"
 
 const Certifications = () => {
   return (
@@ -14,7 +15,7 @@ const Certifications = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: animationConfig.duration.fast, delay: index * animationConfig.delay.short }}
               className="glass-effect p-6 rounded-xl hover:scale-[1.02] transition-all group relative bg-black/40"
             >
               <div className="flex justify-between items-start">
@@ -33,7 +34,7 @@ const Certifications = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="absolute top-4 right-4 p-2 rounded-full bg-[#0EA5E9]/10 text-[#0EA5E9] 
-                           hover:bg-[#0EA5E9] hover:text-white transition-all duration-300"
+                           hover:bg-[#0EA5E9] hover:text-white transition-all duration-200"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >

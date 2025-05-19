@@ -1,11 +1,12 @@
 import { useRef, useEffect, useCallback } from "react";
+import animationConfig from "../utils/animationConfig.js";
 
 const ClickSpark = ({
   sparkColor = "#fff",
   sparkSize = 10,
   sparkRadius = 15,
   sparkCount = 8,
-  duration = 400,
+  duration = 200,  // Faster default duration
   easing = "ease-out",
   extraScale = 1.0,
 }) => {

@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { projects } from "../data/content.js"
 import { useNavigate } from "react-router-dom"
 import TiltedCard from "./TiltedCard.js"
+import animationConfig from "../utils/animationConfig.js"
 
 const Projects = () => {
   const navigate = useNavigate()
@@ -12,8 +13,8 @@ const Projects = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2
+        staggerChildren: animationConfig.stagger,
+        delayChildren: animationConfig.delay.short
       }
     }
   }
@@ -24,7 +25,7 @@ const Projects = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: animationConfig.duration.fast,
         ease: "easeOut"
       }
     }
@@ -36,7 +37,7 @@ const Projects = () => {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: animationConfig.duration.fast }}
           className="apple-heading text-center mb-16 text-white"
         >
           Featured Projects
