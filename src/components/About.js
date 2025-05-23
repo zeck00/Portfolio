@@ -46,18 +46,10 @@ const About = () => {
             </div>
           </div>
           <p className="text-lg text-gray-700 mb-6 text-center">
-            As an AI Engineer and Mobile App Developer, I bridge the gap between
-            cutting-edge artificial intelligence and practical mobile
-            applications. My journey in technology has been driven by a passion
-            for creating innovative solutions that make a real difference in
-            people's lives.
+          As an AI Researcher and Full-Stack App Developer, I bridge cutting-edge AI with real-world impact. My work spans machine learning, NLP, and Flutter development, solving challenges in education, urban planning, and user behavior analysis.
           </p>
           <p className="text-lg text-gray-700 mb-6 text-center">
-            With expertise in Flutter development and machine learning, I've
-            successfully delivered projects ranging from intelligent NLP systems
-            to user-friendly mobile applications. My role as the President of
-            the UOS ACM Student Chapter has further enhanced my leadership and
-            community building skills.
+          With expertise in Flutter development, machine learning, deep learning, and LLMs, I've successfully delivered projects ranging from intelligent NLP systems to in-production user-friendly mobile applications. My role as the President of the UOS ACM Student Chapter has further enhanced my leadership and community building skills.
           </p>
           <div className="flex justify-center gap-4 mt-8">
             <motion.a
