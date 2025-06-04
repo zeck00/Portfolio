@@ -16,6 +16,7 @@ import {
 } from "lucide-react"
 import { projects } from "../data/content.js"
 import animationConfig from "../utils/animationConfig.js"
+import SEO from "./SEO.js"
 
 const getTechIcon = (techName) => {
   const iconMap = {
@@ -75,6 +76,14 @@ const ProjectDetails = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black/20 to-black/90 text-white">
+      <SEO 
+        title={`${project.title} - Project by Ziad Ahmad`}
+        description={`${project.description} Built with ${project.tags ? project.tags.join(', ') : 'modern technologies'}.`}
+        keywords={`${project.title}, ${project.tags ? project.tags.join(', ') : ''}, Ziad Ahmad, Full Stack Developer, Project Portfolio`}
+        image={project.image || "https://ziad.us/assets/logo-DwEzdnd9.png"}
+        url={`https://ziad.us/project/${project.id}`}
+        type="article"
+      />
       <div className="container mx-auto px-4 py-8">
         <nav className="flex items-center justify-between mb-8">
           <Link

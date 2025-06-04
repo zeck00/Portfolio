@@ -1,0 +1,27 @@
+{
+  "short_name": "Ziad Ahmad",
+  "name": "Ziad Ahmad - Full Stack Developer Portfolio",
+  "description": "Portfolio website of Ziad Ahmad, experienced Full Stack Developer specializing in React, Node.js, and modern web technologies",
+  "icons": [
+    {
+      "src": "/assets/logo-DwEzdnd9.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo-DwEzdnd9.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["portfolio", "developer", "technology"]
+} 

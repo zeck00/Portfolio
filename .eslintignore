@@ -1,0 +1,8 @@
+# Ignore everything - ESLint disabled
+*
+**/*
+src/
+public/
+build/
+dist/
+node_modules/ 

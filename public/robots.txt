@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Disallow build artifacts and development files
+Disallow: /build/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /*.js.map
+
+# Sitemap location
+Sitemap: https://ziad.us/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1 

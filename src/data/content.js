@@ -1,5 +1,104 @@
 export const projects = [
   {
+    id: "places",
+    title: "Places - AI Restaurant Discovery Engine",
+    description:
+      "A cutting-edge AI-powered platform helping users discover restaurants in Dubai based on ambiance, menu, budget, and real-time preferences. Places connects food lovers with the perfect dining spot using intelligent search and beautifully crafted user experiences.",
+    image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["AI", "Angular", "AWS", "Figma", "CSS", "Restaurant Discovery", "Web App"],
+    emoji: "🍽️",
+    duration: "Ongoing",
+    teamSize: 2,
+    role: "Frontend Developer & UI/UX Collaborator",
+    features: [
+      "Real-time AI-powered restaurant search based on user prompts",
+      "Interactive chat interface with dynamic query handling",
+      "Responsive, mobile-first web design with smooth transitions",
+      "Custom digital menu builder for businesses",
+      "Analytics dashboard for restaurants with visibility metrics"
+    ],
+    technologies: [
+      { name: "Angular", description: "Core frontend framework for dynamic user interfaces" },
+      { name: "CSS", description: "Responsive and modern web styling" },
+      { name: "Figma", description: "Collaborative UI/UX design system and prototypes" },
+      { name: "AWS", description: "Cloud infrastructure for hosting, APIs, and data pipelines" }
+    ],
+    challenges: [
+      "Creating a flexible UI that adapts to rich query results and filters",
+      "Designing consistent layout systems for chat, business, and search flows",
+      "Balancing visual branding with performance optimization",
+      "Supporting complex restaurant metadata and search relevance"
+    ],
+    solutions: [
+      "Integrated scalable AWS deployment with CDN optimization for performance",
+      "Used Figma’s auto-layout and design tokens for design consistency",
+      "Built Angular components with reusable logic and modularity in mind",
+      "Implemented a layered search architecture connecting AI prompts to indexed restaurant features"
+    ],
+    stats: [
+      "Over 12,000 restaurants indexed in Dubai",
+      "Sub-second AI response time under load",
+      "Responsive UI supports 97% of mobile and desktop resolutions"
+    ],
+    testimonial: {
+      quote: "Places gave us more traffic than paid ads. Customers love how easy it is to find us now.",
+      author: "Partnered Restaurant",
+      role: "Owner"
+    },
+    link: "https://placesuae.com",
+    github: "https://github.com/ziadaloush/"
+  },
+  {
+    id: "babelon",
+    title: "Babelon - Social Platform for Story Lovers",
+    description:
+      "A beautifully crafted storytelling platform merging AI and community. Babelon allows users to share, discover, and engage with stories through immersive reading experiences, smart recommendations, and a sleek, distraction-free interface.",
+    image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["AI", "Flutter", "Supabase", "LLM", "Docker", "Caddy", "React", "AWS", "Content Platform"],
+    emoji: "📖",
+    duration: "3 months",
+    teamSize: 1,
+    role: "Full Stack Developer",
+    features: [
+      "Distraction-free reading screen with pagination logic",
+      "Custom author and story management",
+      "Content publishing with teaser-post structure",
+      "Supabase backend with RLS and secure APIs",
+      "Storage-integrated post image management"
+    ],
+    technologies: [
+      { name: "Flutter", description: "Cross-platform app UI and interactions" },
+      { name: "Supabase", description: "Open-source backend with Postgres and auth" },
+      { name: "Docker", description: "Self-hosted backend deployment on AWS EC2" },
+      { name: "AWS", description: "Self-hosted backend deployment on AWS EC2" },
+      { name: "React", description: "Frontend dashboard and admin panel" },
+      { name: "Caddy", description: "Reverse proxy and HTTPS management" },
+    ],
+    challenges: [
+      "Ensuring scalable and secure self-hosted infrastructure",
+      "Optimizing pagination logic across iOS and Android",
+      "Creating intuitive user flows for post creation and browsing",
+      "Designing a modular schema that supports extensibility"
+    ],
+    solutions: [
+      "Deployed Supabase stack with IP-restricted Caddy access and UFW rules",
+      "Fine-tuned page computation with font-aware breakpoints and overflow control",
+      "Developed visual editor-like post creation UI with real-time preview",
+      "Introduced post-teaser architecture for better content discovery and metadata linking"
+    ],
+    stats: [
+      "99.9% API uptime (self-hosted)",
+      "Fully GDPR compliant with RLS and token-based access",
+      "Seamless post-load transitions across platforms"
+    ],
+    testimonial: {
+      quote: "Babelon redefines reading for the digital age. It feels like holding a book, but smarter.",
+      author: "Beta User",
+      role: "Early Tester"
+    },
+    link: "https://babelon.ai"
+  },
+  {
     id: "vistra",
     title: "Vistra - AI Foresight Engine",
     description: "Dubai's cutting-edge AI Foresight Engine that revolutionizes how we understand and predict global trends, patterns, and risks. Built in partnership with Dubai Customs and Zayed University.",

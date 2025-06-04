@@ -8,6 +8,9 @@ import Contact from "./components/Contact.js"
 // import ThreeBackground from "./components/ThreeBackground.js"
 import ProjectPage from "./components/ProjectPage.js"
 import Certifications from "./components/Certifications.js"
+import SEO from "./components/SEO.js"
+import StructuredData from "./components/StructuredData.js"
+import { projects, skills } from "./data/content.js"
 import { useEffect } from "react"
 
 // Create a ScrollToTop component
@@ -31,6 +34,8 @@ function App() {
             path="/"
             element={
               <>
+                <SEO />
+                <StructuredData projects={projects} skills={skills} />
                 <Hero />
                 <About />
                 <Skills />
